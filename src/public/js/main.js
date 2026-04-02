@@ -45,8 +45,8 @@ $(function(){
         socket.emit('Enviar mensaje', msg, data => {
         if(data) $chat.append(`<p class="error">${data}</p>`);
             });
-
         $messageBox.val('');
+        $messageBox.focus();
     });
 
     // Formato de mensajes: propios vs ajenos con estilos distintos

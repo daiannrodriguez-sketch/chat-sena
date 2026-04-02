@@ -27,6 +27,7 @@ $(function(){
                 myNickname = nick;
                 $('#nickWrap').hide();
                 $('#contentWrap').show();
+                setTimeout(() => $messageBox.focus(), 100);
             } else {
                 $nickError.html('<div class="alert alert-danger">El nombre de usuario ya existe.</div>');
             }
@@ -46,7 +47,7 @@ $(function(){
         if(data) $chat.append(`<p class="error">${data}</p>`);
             });
         $messageBox.val('');
-        $messageBox.focus();
+        setTimeout(() => $messageBox.focus(), 100);
     });
 
     // Formato de mensajes: propios vs ajenos con estilos distintos
